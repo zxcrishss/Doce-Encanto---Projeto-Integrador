@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doce Encanto | Promoções e Combos</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container">
+      <a href="../inicio/index.html" class="logo"><img src="../images/logo.png" alt="Doce Encanto"></a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-toggle-label">☰</label>
+
+      <ul class="nav-links">
+        <li><a href="../inicio/index.html">Início</a></li>
+        <li><a href="../donuts/index.html">Donuts</a></li>
+        <li><a href="../tortas/index.html">Tortas</a></li>
+        <li><a href="../acompanhamentos/index.html">Acompanhamentos</a></li>
+        <li><a href="index.html" class="ativo">Promoções</a></li>
+        <li><a href="../historia/index.html">Nossa história</a></li>
+        <li><a href="../login/index.html">Entrar</a></li>
+      </ul>
+
+      <div class="nav-icones">
+        <a href="../favoritos/index.html" class="icone-link"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><span id="contador-favoritos" class="contador" style="display:none">0</span></a>
+        <a href="../carrinho/index.html" class="icone-link"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg><span id="contador-carrinho" class="contador" style="display:none">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="secao container">
+      <div class="secao-cabecalho">
+        <div>
+          <h2>Promoções e combos</h2>
+          <p>Mais doce por um preço mais gostoso ainda.</p>
+        </div>
+      </div>
+
+      <div class="grade-produtos">
+
+        <div class="produto-card" data-id="combo-manha-doce" data-nome="Combo Manhã Doce" data-preco="19.90" data-imagem="../images/combo-manha-doce.jpg">
+          <div class="produto-imagem">
+            <img src="../images/combo-manha-doce.jpg" alt="Combo Manhã Doce — substitua pela sua foto">
+            <span class="selo selo-desconto">-17%</span>
+            <button class="btn-favorito" onclick="favoritar(this)">♡</button>
+          </div>
+          <div class="produto-info">
+            <h3>Combo Manhã Doce</h3>
+            <p class="produto-descricao">2 donuts à sua escolha + 1 chá quentinho.</p>
+            <div class="produto-rodape">
+              <span><span class="preco-antigo">R$ 23,90</span><span class="preco">R$ 19,90</span></span>
+              <button class="btn-adicionar" onclick="adicionarCarrinho(this)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="produto-card" data-id="combo-dupla-perfeita" data-nome="Combo Dupla Perfeita" data-preco="17.90" data-imagem="../images/combo-dupla-perfeita.jpg">
+          <div class="produto-imagem">
+            <img src="../images/combo-dupla-perfeita.jpg" alt="Combo Dupla Perfeita — substitua pela sua foto">
+            <span class="selo selo-desconto">-13%</span>
+            <button class="btn-favorito" onclick="favoritar(this)">♡</button>
+          </div>
+          <div class="produto-info">
+            <h3>Combo Dupla Perfeita</h3>
+            <p class="produto-descricao">1 fatia de torta à escolha + 1 água ou chá.</p>
+            <div class="produto-rodape">
+              <span><span class="preco-antigo">R$ 20,50</span><span class="preco">R$ 17,90</span></span>
+              <button class="btn-adicionar" onclick="adicionarCarrinho(this)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="produto-card" data-id="combo-festa-rosa" data-nome="Combo Festa Rosa" data-preco="45.00" data-imagem="../images/combo-festa-rosa.jpg">
+          <div class="produto-imagem">
+            <img src="../images/combo-festa-rosa.jpg" alt="Combo Festa Rosa — substitua pela sua foto">
+            <span class="selo selo-desconto">-12%</span>
+            <button class="btn-favorito" onclick="favoritar(this)">♡</button>
+          </div>
+          <div class="produto-info">
+            <h3>Combo Festa Rosa</h3>
+            <p class="produto-descricao">Caixa com 6 donuts sortidos, ótima para dividir.</p>
+            <div class="produto-rodape">
+              <span><span class="preco-antigo">R$ 51,00</span><span class="preco">R$ 45,00</span></span>
+              <button class="btn-adicionar" onclick="adicionarCarrinho(this)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="produto-card" data-id="combo-tarde-doce" data-nome="Combo Tarde Doce" data-preco="24.90" data-imagem="../images/combo-tarde-doce.jpg">
+          <div class="produto-imagem">
+            <img src="../images/combo-tarde-doce.jpg" alt="Combo Tarde Doce — substitua pela sua foto">
+            <span class="selo selo-desconto">-15%</span>
+            <button class="btn-favorito" onclick="favoritar(this)">♡</button>
+          </div>
+          <div class="produto-info">
+            <h3>Combo Tarde Doce</h3>
+            <p class="produto-descricao">1 fatia de torta + 1 donut + 1 chá gelado.</p>
+            <div class="produto-rodape">
+              <span><span class="preco-antigo">R$ 29,40</span><span class="preco">R$ 24,90</span></span>
+              <button class="btn-adicionar" onclick="adicionarCarrinho(this)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="produto-card" data-id="combo-caixa-mini-donuts" data-nome="Caixa Mini Donuts" data-preco="29.90" data-imagem="../images/combo-caixa-mini-donuts.jpg">
+          <div class="produto-imagem">
+            <img src="../images/combo-caixa-mini-donuts.jpg" alt="Caixa Mini Donuts — substitua pela sua foto">
+            <span class="selo selo-desconto">-14%</span>
+            <button class="btn-favorito" onclick="favoritar(this)">♡</button>
+          </div>
+          <div class="produto-info">
+            <h3>Caixa Mini Donuts</h3>
+            <p class="produto-descricao">12 mini donuts sortidos, perfeitos para festas.</p>
+            <div class="produto-rodape">
+              <span><span class="preco-antigo">R$ 34,90</span><span class="preco">R$ 29,90</span></span>
+              <button class="btn-adicionar" onclick="adicionarCarrinho(this)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="produto-card" data-id="combo-torta-inteira" data-nome="Torta Inteira + Brinde" data-preco="52.00" data-imagem="../images/combo-torta-inteira.jpg">
+          <div class="produto-imagem">
+            <img src="../images/combo-torta-inteira.jpg" alt="Torta Inteira + Brinde — substitua pela sua foto">
+            <span class="selo selo-desconto">Chá de brinde</span>
+            <button class="btn-favorito" onclick="favoritar(this)">♡</button>
+          </div>
+          <div class="produto-info">
+            <h3>Torta Inteira + Brinde</h3>
+            <p class="produto-descricao">Leve uma torta inteira e ganhe um chá para acompanhar.</p>
+            <div class="produto-rodape">
+              <span class="preco">R$ 52,00</span>
+              <button class="btn-adicionar" onclick="adicionarCarrinho(this)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>Doce Encanto — feito com carinho e um tantinho de açúcar. 🩷</p>
+      <p class="rodape-info">Rua das Flores, 123 — Jardim Primavera, São Paulo - SP &nbsp;·&nbsp; (11) 4002-8922</p>
+      <p class="rodape-info">© 2026 Doce Encanto. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../js/carrinho.js"></script>
+</body>
+</html>
